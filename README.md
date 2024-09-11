@@ -9,4 +9,4 @@
 
 Hacemos un sistema para un gimnasio, para que pueda tener registro sobre sus entrenadores, con sus respectivas actividades.
 
-![DER](URL-de-la-imagen)
+![DER](./Captura%20de%20pantalla%20(510).png)
