@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-09-2024 a las 00:54:41
+-- Tiempo de generación: 16-09-2024 a las 22:28:24
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -35,6 +35,15 @@ CREATE TABLE `actividades` (
   `id_Entrenador` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `actividades`
+--
+
+INSERT INTO `actividades` (`id_Actividad`, `nombre_actividad`, `duracion`, `capacidad_maxima`, `id_Entrenador`) VALUES
+(2, 'Musculación', 60, 15, 5),
+(3, 'GAP', 60, 10, 6),
+(4, 'Spinning', 45, 8, 7);
+
 -- --------------------------------------------------------
 
 --
@@ -45,10 +54,19 @@ CREATE TABLE `entrenadores` (
   `id_Entrenador` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `apellido` varchar(50) NOT NULL,
-  `telefono` int(15) NOT NULL,
+  `telefono` bigint(15) NOT NULL,
   `email` varchar(100) NOT NULL,
   `fecha_contratacion` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `entrenadores`
+--
+
+INSERT INTO `entrenadores` (`id_Entrenador`, `nombre`, `apellido`, `telefono`, `email`, `fecha_contratacion`) VALUES
+(5, 'Pablo', 'Cantero', 2494555823, 'canterop@gmail.com', '2015-09-23'),
+(6, 'Victoria', 'Flores', 2494602289, 'viquiflores00@gmail.com', '2018-09-13'),
+(7, 'Brian', 'Sarno', 2494555588, 'brian@gmail.com', '2023-09-14');
 
 --
 -- Índices para tablas volcadas
@@ -77,13 +95,13 @@ ALTER TABLE `entrenadores`
 -- AUTO_INCREMENT de la tabla `actividades`
 --
 ALTER TABLE `actividades`
-  MODIFY `id_Actividad` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Actividad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `entrenadores`
 --
 ALTER TABLE `entrenadores`
-  MODIFY `id_Entrenador` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Entrenador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Restricciones para tablas volcadas
