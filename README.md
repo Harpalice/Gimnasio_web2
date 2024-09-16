@@ -9,4 +9,5 @@
 
 Hacemos un sistema para un gimnasio, para que pueda tener registro sobre sus entrenadores, con sus respectivas actividades.
 
+## DER
 ![DER](./DER.png)
