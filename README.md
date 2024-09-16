@@ -3,7 +3,7 @@
 ## Integrantes:
 
 * Cantero Gomez, Pablo Eduardo.
-* Flores Depietri; Victoria.
+* Flores Depietri, Victoria.
 
 ## Descripción
 
