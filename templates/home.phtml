@@ -1,0 +1,32 @@
+<body>
+    <?php require_once './templates/layouts/header.phtml'?>
+    <h1>Lista de actividades: </h1>
+    
+    <!-- imprime la tabla de actividades -->
+    <table>
+        <thead>
+            <tr>
+                <th>Actividad</th>
+                <th>Duración</th>
+                <th>Capacidad máxima</th>
+                <th>Entrenador</th>
+            </tr>
+        <thead>
+        <tbody>
+        <?php foreach($activities as $activity):?> <!-- Imprime solo las filas --> 
+            <tr>
+                <td> <?php echo $activity->name_activity; ?> </td>
+                <td> <?php echo $activity->duration; ?> </td>
+                <td> <?php echo $activity->capacity_max; ?> </td>
+                <td> 
+                    <a href="listTrainers/<?php echo $activity->id_Trainer; ?>"> 
+                        <button> Ver más </button> 
+                    </a>
+                </td> 
+            </tr>
+        <?php endforeach ?>
+        </tbody>    
+    </table>    
+
+    <?php require_once './templates/layouts/footer.phtml'?>
+</body>

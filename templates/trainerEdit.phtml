@@ -1,0 +1,32 @@
+<?php require_once './templates/header.phtml'?>
+
+<ul>
+    <li>ID Entrenador: <?= $trainer->id_trainer ?></li>
+    <li>Nombre: <?= $trainer->name ?></li>
+    <li>Apellido: <?= $trainer->lastname ?></li>
+    <li>Teléfono: <?= $trainer->phone ?></li>
+    <li>Email: <?= $trainer->email ?></li>
+    <li>Fecha de contratación: <?= $trainer->fecha_contratacion ?></li>
+</ul>
+
+<form method="post" action="updateTrainer/<?= $trainersId ?>">
+    <label>Nombre</label>
+    <input type="text" name="nombre" id="nombre" value="<?= $trainer->name ?>" required>
+    
+    <label>Apellido</label>
+    <input type="text" name="apellido" id="apellido" value="<?= $trainer->lastname ?>" required>
+    
+    <label>Teléfono</label>
+    <input type="text" name="telefono" id="telefono" value="<?= $trainer->phone ?>" required>
+    
+    <label>Email</label>
+    <input type="email" name="email" id="email" value="<?= $trainer->email ?>" required>
+    
+    <label>Fecha de contratación</label>
+    <input type="date" name="fecha_contratacion" id="fecha_contratacion" value="<?= $trainer->fecha_contratacion ?>" required>
+
+    <button type="submit">Actualizar</button>
+</form>
+
+
+<?php require_once './templates/footer.phtml'?>

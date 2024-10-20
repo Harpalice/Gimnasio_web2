@@ -1,0 +1,90 @@
+<?php require_once 'templates/layouts/headerAdministrador.phtml'?>
+
+<?php if (AuthHelper::isAuthenticated()) :?>
+    <!-- FORMULARIO DE ACTIVIDADES  -->
+    <form action="addActivity" method="POST" class="my-4"> <!-- La acción es la de mi tabla de ruteo(Ya no es más: agregar.php -->
+        <h1>Actividades</h1>    
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Actividad</label>
+                    <input required name="name_activity" type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Duración</label>
+                    <input required name="duration" type="number" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Capacidad máxima</label>
+                    <input required name="capacity_max" type="number" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label>ID</label>
+                    <input required name="id_Trainer" type="number" class="form-control">
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Cargar</button>
+    </form>
+    
+    <!-- FORMULARIO DE ENTRENADORES  -->
+    <form action="addTrainer" method="POST" class="my-4"> <!-- La acción es la de mi tabla de ruteo(Ya no es más: agregar.php -->
+        <h1> Entrenadores </h1>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input required name="name" type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Apellido</label>
+                    <input required name="lastname" type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input required name="phone" type="number" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Mail</label>
+                    <input required name="email" type="email" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Fecha de contratación</label>
+                    <input required name="contracting" type="date" class="form-control">
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Cargar</button>
+    </form>
+<?php else : ?>
+    <p>Acceso denegado. Necesitas iniciar sesión para acceder a esta página.</p>
+<?php endif; ?>
+<?php require_once './templates/layouts/footer.phtml'?>

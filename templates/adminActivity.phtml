@@ -1,0 +1,34 @@
+<body>
+    <?php require_once './templates/layouts/headerAdministrador.phtml'?>
+    <?php if (AuthHelper::isAuthenticated()) :?>
+    <H1>Actividades</H1>
+
+    <?php foreach($activities as $actividad) :?>
+        <p>Actividad: <?=$actividad->name_activity?>, duracion: <?=$actividad->duration?>, Capacidad maxima: <?=$actividad->capacity_max?>, Entrenador: <?=$actividad->id_Trainer?></p>
+    <?php endforeach ?>
+    
+    <ul class="list-group">
+        <?php
+            foreach($activities as $activity) { 
+                // var_dump($task->finalizada); // Verifica el valor    
+            ?>
+            <!-- <li class="list-group-item item-task finalizada" style="text-decoration: line-through; opacity: 0.5;"> -->
+            <li class="list-group-item item-task">
+            
+                <div>
+                    <b><?php echo $activity->name_activity ?></b>
+                </div>
+                <div class="actions"> <!-- éste link me va a ir a editar/id -->
+                    <a href="editActivity/<?php echo $activity->id_Activity ?>" type="button" class="btn btn-success ml-auto">Editar</a>
+                </div>    
+                <div class="actions"> <!-- éste link me va a ir a eliminar/id -->
+                    <a href="removeActivity/<?php echo $activity->id_Activity ?>" type="button" class='btn btn-danger ml-auto'>Borrar</a>
+                </div>
+            </li>
+        <?php } ?>
+    </ul>
+    <?php else : ?>
+        <p>Acceso denegado. Necesitas iniciar sesión para acceder a esta página.</p>
+    <?php endif; ?>
+    <?php require_once './templates/layouts/footer.phtml'?>
+</body>

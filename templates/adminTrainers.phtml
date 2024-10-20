@@ -1,0 +1,31 @@
+<body>
+    <?php require_once './templates/layouts/headerAdministrador.phtml'?>
+    <?php if (AuthHelper::isAuthenticated()) :?>
+    <H1>Entrenadores</H1>
+    <?php foreach($trainers as $trainer) :?>
+        <p>Entrenador: <?=$trainer->name?>, apellido: <?=$trainer->lastname?>, Telefono: <?=$trainer->phone?>, Email: <?=$trainer->email?>, Fecha Contrato: <?=$trainer->contracting?></p>
+    <?php endforeach ?>
+    <ul class="list-group">
+        <?php
+            foreach($trainers as $trainer) { 
+                // var_dump($task->finalizada); // Verifica el valor    
+            ?>
+            <!-- <li class="list-group-item item-task finalizada" style="text-decoration: line-through; opacity: 0.5;"> -->
+            <li class="list-group-item item-task">
+                <div>
+                    <b><?php echo $trainer->name ?></b>
+                </div>
+                <div class=""> <!-- éste link me va a ir a editar/id -->
+                    <a href="editTrainer/<?php echo $trainer->id_Trainer ?>" type="button" class="btn btn-success ml-auto">Editar</a>
+                </div>    
+                <div class="actions"> <!-- éste link me va a ir a eliminar/id -->
+                    <a href="removeTrainer/<?php echo $trainer->id_Trainer ?>" type="button" class='btn btn-danger ml-auto'>Borrar</a>
+                </div>
+            </li>
+        <?php } ?>
+    </ul>
+    <?php else : ?>
+        <p>Acceso denegado. Necesitas iniciar sesión para acceder a esta página.</p>
+    <?php endif; ?>
+    <?php require_once 'templates/layouts/footer.phtml'?>
+</body>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <?php require_once 'templates/layouts/header.phtml'?>
+
+    <div class="loginForm">
+        <form method="POST" action="auth">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" required class="form-control" id="name" name="name" aria-describedby="usernameHelp">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" required class="form-control" id="password" name="password">
+            </div>
+
+            <!--<?php if ($msg) : ?>
+                <div class="error">
+                    <?= $msg ?>
+                </div>
+            <?php endif ?>-->
+
+            <button type="submit" class="btn btn-primary mt-3" >Login</button>
+        </form>
+    </div>
+
+    <?php require_once 'templates/layouts/footer.phtml' ?>
+</body>
+
+</html>

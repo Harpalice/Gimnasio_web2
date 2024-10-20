@@ -1,0 +1,19 @@
+<?php require_once './templates/layouts/headerAdministrador.phtml' ?>;
+
+<form action="editadoActivity/<?= $id_Activity ?>" method="POST">
+    
+    <label for="name_activity">Nombre de Actividad:</label>
+    <input type="text" id="name_activity" name="name_activity" value="<?= $activity->name_activity ?>" required>
+    
+    <label for="duration">Duración:</label>
+    <input type="number" id="duration" name="duration" value="<?= $activity->duration ?>" required>
+    
+    <label for="capacity_max">Capacidad Máxima:</label>
+    <input type="number" id="capacity_max" name="capacity_max" value="<?= $activity->capacity_max ?>" required>
+    
+    <label for="id_Trainer">ID del Entrenador:</label>
+    <input type="text" id="id_Trainer" name="id_Trainer" value="<?= $activity->id_Trainer ?>" required>
+    
+    <button type="submit">Actualizar</button>
+</form>
+<?php require_once './templates/layouts/footer.phtml' ?>;

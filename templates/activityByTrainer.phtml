@@ -1,0 +1,25 @@
+<body>
+    <?php require_once './templates/layouts/header.phtml'?>
+    <h1>Dicta las siguientes actividades: </h1>    
+    <!-- imprime la tabla de actividades -->
+    <table>
+        <thead>
+            <tr>
+                <th>Actividad</th>
+                <th>Duración</th>
+                <th>Capacidad máxima</th>
+            </tr>
+        </thead> <!-- Corrección de la etiqueta -->
+        <tbody>
+            <?php foreach($activities as $activity): ?> <!-- Imprime solo las filas --> 
+                <tr>
+                    <td> <?php echo $activity->name_activity; ?> </td>
+                    <td> <?php echo $activity->duration; ?> </td>
+                    <td> <?php echo $activity->capacity_max; ?> </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>    
+    </table>    
+
+    <?php require_once './templates/layouts/footer.phtml'?>
+</body>

@@ -1,0 +1,23 @@
+<?php require_once './templates/layouts/headerAdministrador.phtml' ?>;
+
+<form action="editadoTrainer/<?= $id_Trainer ?>" method="POST">
+    <input type="hidden" name="id_Trainer" value="<?= $id_Trainer ?>">
+    
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" value="<?= $trainer->name?>" required>
+    
+    <label for="lastname">Apellido:</label>
+    <input type="text" id="lastname" name="lastname" value="<?= $trainer->lastname ?>" required>
+    
+    <label for="phone">Telefono:</label>
+    <input type="number" id="phone" name="phone" value="<?= $trainer->phone?>" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="<?= $trainer->email ?>" required>
+
+    <label for="contracting">Fecha de contratacion:</label>
+    <input type="date" id="contracting" name="contracting" value="<?= $trainer->contracting ?>" required>
+    
+    <button type="submit">Actualizar</button>
+</form>
+<?php require_once './templates/layouts/footer.phtml' ?>;

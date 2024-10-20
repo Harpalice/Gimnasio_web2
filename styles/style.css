@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    background-color: #111;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e50914;
+}
+
+.hero {
+    text-align: center;
+    color: #fff;
+    padding: 80px 0;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Formulario de géneros */
+#form-genres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#form-genres div {
+    text-align: center;
+    margin: 10px;
+}
+
+#form-genres h4 {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* Estilo de los checkboxes */
+#form-genres input[type="checkbox"] {
+    display: none;
+}
+
+/* Estilo de los contenedores de los checkboxes */
+#form-genres div {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Estilo de las etiquetas de los checkboxes */
+#form-genres label {
+    display: inline-block;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Estilo de los íconos de los checkboxes */
+#form-genres label::before {
+    content: "\2713";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border: 1px solid #555;
+    border-radius: 3px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo de los íconos cuando los checkboxes están marcados */
+#form-genres input[type="checkbox"]:checked + label::before {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.formpelis {
+    margin: 20px;
+    margin-bottom: 15%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 5px;
+    max-width: 400px; /* Ancho máximo para evitar que se extiendan demasiado */
+}
+
+/* Estilo para las etiquetas */
+.form-group label {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilo para los campos de entrada */
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Estilo para los botones */
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para los botones específicos */
+.btn-primary {
+    background-color: #007bff;
+}
+
+/* BOTON FILTRAR */
+#form-genres input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#form-genres input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Sección de Películas */
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.movie {
+    margin: 20px;
+    text-align: center;
+}
+
+.movie h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.movie button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.movie button:hover {
+    background-color: #0056b3;
+}
+
+.movies > a {
+    border: dotted 0.2px gray;
+    background-color: #222;
+}
+
+/* Categorías */
+.category {
+    margin-top: 3%;
+    margin-bottom: 5%;
+    padding: 20px;
+    background-color: #222;
+}
+
+.category h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.category h4 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.category a.a-movies {
+    display: block;
+    text-decoration: none;
+    color: #df2727;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+}
+
+/* Estilo de los enlaces cuando se pasa el cursor sobre ellos */
+.category a.a-movies:hover {
+    background-color: #c0173e;
+    color: #fff;
+    border: 1px solid #1c334b;
+}
+
+/* Pie de página */
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+}

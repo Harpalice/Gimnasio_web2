@@ -1,0 +1,36 @@
+<body>
+    <?php require_once './templates/layouts/header.phtml'?>
+    <h1>Lista de entrenadores: </h1>
+    
+    <!-- imprime la tabla de entrenadores -->
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Fecha de contratación</th>
+                <th>Disciplinas</th>
+            </tr>
+        <thead>
+        <tbody>
+        <?php foreach($trainers as $trainer):?> <!-- Imprime solo las filas --> 
+            <tr>
+                <td> <?php echo $trainer->name; ?> </td>
+                <td> <?php echo $trainer->lastname; ?> </td>
+                <td> <?php echo $trainer->phone; ?> </td>
+                <td> <?php echo $trainer->email; ?> </td>
+                <td> <?php echo $trainer->contracting; ?> </td>
+                <td> 
+                    <a href="listActivity/<?php echo $trainer->id_Trainer; ?>">
+                        <button> Ver más </button> 
+                    </a>
+                </td> 
+            </tr>
+        <?php endforeach ?>
+        </tbody>    
+    </table>    
+
+    <?php require_once './templates/layouts/footer.phtml'?>
+</body>
